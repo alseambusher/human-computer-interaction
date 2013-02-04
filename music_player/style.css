@@ -131,9 +131,10 @@ body{
     text-align:left;
     height:250px;
     overflow:hidden;
+   
 }
 #player{
-	background-image:url("icon.jpg");
+	background-image:url("images3.jpeg");
     	height:250px;
     	overflow:hidden;
 }
@@ -155,4 +156,7 @@ body{
     width:5px;
     height:5px;
     font-size:0.5em;
+}
+#pto{
+	font-size:0.7em;
 }

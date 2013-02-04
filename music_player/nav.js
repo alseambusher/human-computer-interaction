@@ -34,7 +34,8 @@ function mid(){
 			position=0;
 			update_options();
         }
-        else{
+        else if(history[history.length-1]!='data.Help'){
+	console.log(history);
             history.push('player');
             $('#playing_song').html(elements[position]);
             player_toggle();
@@ -74,4 +75,5 @@ function back(){
 	    update_options();
     }
 }
+
 

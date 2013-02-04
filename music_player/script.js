@@ -1,12 +1,14 @@
 var position=0;
 var volume=0;
 var playing=false;
+var shfl=0;
 //data
-var all_songs=['New Divide','Thousand Suns','1','2','3','4','5','6'];
-var playlists={'alse':['1','2'],'praj':['3','4']};
-var artists={'alse':['x','y'],'praj':['q','w']};
-var albums={'alse':['!','@'],'praj':['#','$']};
-var data={'All':all_songs,'Playlists':playlists,'Artists':artists,'Albums':albums};
+var all_songs=['New Divide','Thousand Suns','Apologize','Drive By','Low','The Reason','Magnificent','Fireflies'];
+var playlists={'alse':['Drive By','Magnificent'],'prajwal':['The Reason','Apologize']};
+var artists={'LinkinPark':['New Divide','Fireflies'],'Hoobastank':['The reason','Low']};
+var albums={'AllTimeGreats':['Drive By','Low'],'Applause':['Thousand Suns','Low']};
+var help=[ '              OPTIONS','Left Button for selection, play or pause','Right Button for going back','  ^ and v for scrolling list or changing volume','   < and > for rewind and fast forward respectively','  4 and 6 for previous and next song respectively','0 for toggling shuffle option','* for mute'];
+var data={'All':all_songs,'Playlists':playlists,'Artists':artists,'Albums':albums,'Help':help};
 var elements=[];
 var history=[];
 /*
@@ -25,7 +27,8 @@ $(function(){
     $('#bottom_bar a').removeClass('hover');
 
     $("#nav_buttons a").removeClass("btn-inverse");
-
+    
+  // $('#volume').html('<i class="icon-volume-up icon-white" style="float:left"></i>');
     today=new Date();
     $('#timer').html(today.getHours()+':'+today.getMinutes()+':'+today.getSeconds());
     volume_control('increase');
@@ -43,6 +46,10 @@ function update_options(){
     for(var i in [0,1,2,3,4]){
         $("#elt"+i+' a').html(elements[parseInt(position/5)*5+parseInt(i)]);
     }
+	if(elements.length>5)
+	$("#pto").html('Page '+(parseInt(position/5)+1)+' of '+(parseInt(elements.length/5)+1));
+	else
+	$("#pto").html('');
     $("#options li").removeClass('active');
     $("#elt"+(position%5)).addClass('active');
 }

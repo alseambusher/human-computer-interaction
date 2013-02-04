@@ -14,13 +14,14 @@
 		<div class="screen">
             <div id="top_bar">
 	    	    <em id="volume" style="float:left"></em>
-	    	    <i class="icon-volume-up icon-white"></i>
+	    	
                 <i class="icon-music icon-white"></i>
                 <i class="icon-signal icon-white"></i>
                 <small id="timer"></small>
             </div>
             <div class="display">
                 <b>Media Player</b>
+		<em id="shuffle" style="float:right;padding:2px;"></em>
                 <div id="player">
 			        <em id="playing_song">Thousand suns</em>
 			        <div id="player_controls">
@@ -33,7 +34,7 @@
 			            <a class="btn btn-info"><i class="icon-forward"></i></a>
 			        </div>
                 </div>
-                <div id="options">
+                <div id="options" >
                     <ul class="nav nav-list">
                         <li id="elt0" class="active"><a href="#"></a></li>
                         <li id="elt1"><a href="#"></a></li>
@@ -41,6 +42,7 @@
                         <li id="elt3"><a href="#"></a></li>
                         <li id="elt4"><a href="#"></a></li>
                     </ul>
+		<div id="pto" style="float:right"></div>
                 </div>
             </div>
             <div id="bottom_bar">
@@ -74,9 +76,9 @@
 			<td><a>3</a></td>
 			</tr>
 			<tr>
-			<td><a onclick="left();">4</a></td>
+			<td><a onclick="prv_song();">4</a></td>
 			<td><a onclick="mid();">5</a></td>
-			<td><a onclick="right();">6</a></td>
+			<td><a onclick="nxtOrShfl();">6</a></td>
 			</tr>
 			<tr>
 			<td><a>7</a></td>
@@ -84,8 +86,8 @@
 			<td><a>9</a></td>
 			</tr>
 			<tr>
-			<td><a>*</a></td>
-			<td><a>0</a></td>
+			<td><a onclick="mute();">*&nbsp;<i class="icon-volume-off icon-white"></i></a></td>
+			<td><a onclick="shuffle();">0</a></td>
 			<td><a>#</a></td>
 			</tr>
 		</table>
