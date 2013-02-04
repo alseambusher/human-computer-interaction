@@ -1,0 +1,207 @@
+/* box-shadow: x-offest y-offset blur length  color*/
+body{
+    background:#eee;
+    padding:80px;
+    font-family:ubuntu,arial,sans;
+}
+#tablet_container{
+    box-shadow: 0px 0px 30px rgba(0,0,0,.8);
+    width:800px;
+    height:540px;
+    border-radius:25px;
+    background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #1c1c1c 91%, #111111 99%, #2b2b2b 100%, #131313 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(12%,#595959), color-stop(25%,#666666), color-stop(39%,#474747), color-stop(50%,#2c2c2c), color-stop(91%,#1c1c1c), color-stop(99%,#111111), color-stop(100%,#2b2b2b), color-stop(100%,#131313));
+}
+.tablet{
+	padding-top:20px;
+	width:720px;
+	height:420px;
+	overflow:hidden;
+	background:#eee;
+    	box-shadow: 0px 0px 15px #333;
+	border-radius:5px;
+}
+#home{
+	background:url('home.jpg');
+	background-size:720px 420px;
+}
+
+#image_library{
+	text-align:center;
+	background:url('image_editor.jpg');
+	background-size:720px 520px;
+}
+#image_library img{
+	width:140px;
+	height:100px;
+	border:5px solid #fff;
+	margin:10px;
+    -moz-transition-duration:0.5s;
+    -webkit-transition-duration:0.5s;
+    transition-duration:0.5s;
+}
+#image_library img:hover{
+	-moz-transform:rotate(9deg);
+	-webkit-transform:rotate(9deg);
+	transform:rotate(9deg);
+}
+
+#editor{
+}
+
+.center{
+	text-align:center;
+	margin:0 auto;
+}
+#phone{
+    /* btn */
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #F5F5F5;
+    background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+    background-repeat: repeat-x;
+    border-image: none;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333333;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 0;
+    padding: 4px 12px;
+    text-align: center;
+    vertical-align: middle;
+
+    /* btn-danger */
+    cursor:pointer;
+    background-color: #DA4F49;
+    background-image: linear-gradient(to bottom, #EE5F5B, #BD362F);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+
+    /* mine */
+    padding-top:30px;
+    text-align:center;
+    width:250px;
+    height:550px;
+    border-radius:15px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,.8);
+    color:#111;
+
+
+
+}
+#phone:hover{
+    box-shadow: 0px 0px 30px rgba(0,0,0,.8);
+}
+.screen{
+	width:200px;
+	height:270px;
+	background:#eee;
+	border-radius:2px;
+	margin:0 auto;
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,1);
+    overflow:hidden;
+    /*background-image: linear-gradient(to bottom, #eee, #999);*/
+}
+.display{
+    text-align:center;
+    width:200px;
+    height:205px;
+}
+#top_bar{
+    height:20px;
+    position:relative;
+    top:0px;
+    color:#fff;
+    background:#000;
+    text-align:right;
+    padding-right:10px;
+    overflow:hidden;
+}
+#bottom_bar{
+    background:#000;
+    position:relative;
+    bottom:-20px;
+}
+#bottom_bar a{
+    height:25px;
+    width:100px;
+    padding:0px;
+    margin:-2px;
+}
+
+.buttons{
+	padding:5px;
+	padding-top:15px;
+}
+.button_controls{
+	color:#fff;
+    width:30px;
+    height:20px;
+    box-shadow: 0px 0px 5px rgba(255,255,255,.8);
+}
+.numbers{
+	width:45px;
+	height:25px;
+	text-align:center;
+    box-shadow: 0px 0px 5px rgba(255,255,255,.8);
+}
+
+#nav_buttons{
+    padding-left:20px;
+    padding-right:20px;
+}
+#nav_button_horizontal{
+    width:45px;
+    height:10px;
+    padding:0px;
+}
+#nav_button_vertical{
+    width:10px;
+    height:40px;
+    padding:0px;
+    margin:-3px;
+}
+#nav_button_mid{
+    width:40px;
+    height:40px;
+    padding:0px;
+}
+#options{
+    text-align:left;
+    height:250px;
+    overflow:hidden;
+   
+}
+#player{
+	background-image:url("images3.jpeg");
+    	height:250px;
+    	overflow:hidden;
+}
+#player_controls{
+	padding:3px;
+	background:#eee;
+	position:relative;
+	bottom:-105px;
+    opacity:0.9;
+    filter(opacity=90);
+}
+#player_controls a{
+    border-radius:10px;
+	background-image: -webkit-linear-gradient(top,#97A2A5,#C9D6DA);
+	background-image: -moz-linear-gradient(top,#97A2A5,#C9D6DA);
+}
+.volume{
+    background:#fff;
+    width:5px;
+    height:5px;
+    font-size:0.5em;
+}
+#pto{
+	font-size:0.7em;
+}

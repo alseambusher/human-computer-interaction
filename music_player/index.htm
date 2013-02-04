@@ -1,0 +1,96 @@
+<!docktype html>
+<html>
+<head>
+<title>Music Player</title>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<script src="bootstrap/js/jquery.js"></script>
+<script src="script.js"></script>
+<script src="misc.js"></script>
+<script src="nav.js"></script>
+<body>
+<center>
+	<div id="phone">
+		<div class="screen">
+            <div id="top_bar">
+	    	    <em id="volume" style="float:left"></em>
+	    	    <i class="icon-volume-up icon-white"></i>
+                <i class="icon-music icon-white"></i>
+                <i class="icon-signal icon-white"></i>
+                <small id="timer"></small>
+            </div>
+            <div class="display">
+                <b>Media Player</b>
+                <div id="player">
+			        <em id="playing_song">Thousand suns</em>
+			        <div id="player_controls">
+                        <h6><b style="float:left">00:00</b> <b style="float:right">01:40</b>.</h6>
+			            <div class="progress progress-striped active" style="height:12px;">
+  				            <div class="bar" id="bar"style="width: 0%;"></div>
+			            </div>
+			            <a class="btn btn-info"><i class="icon-backward"></i></a>
+			            <a class="btn btn-info"><i class="icon-play" id="play"></i></a>
+			            <a class="btn btn-info"><i class="icon-forward"></i></a>
+			        </div>
+                </div>
+                <div id="options">
+                    <ul class="nav nav-list">
+                        <li id="elt0" class="active"><a href="#"></a></li>
+                        <li id="elt1"><a href="#"></a></li>
+                        <li id="elt2"><a href="#"></a></li>
+                        <li id="elt3"><a href="#"></a></li>
+                        <li id="elt4"><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="bottom_bar">
+                <a class="btn btn-inverse btn-small" id="bottom_bar_1">Select</a>
+                <a class="btn btn-inverse btn-small" id="bottom_bar_2">Back</a>
+            </div>
+		</div>
+		<div class="buttons center">
+		<table class="center" id="button_controls">
+			<tr>
+                <td><a onclick="mid();"><i class="icon-minus"></i><i class="icon-minus"></i></a></td>
+				<td rowspan="2" id="nav_buttons">
+                    <button id="nav_button_horizontal" onclick="up();"></button><br>
+                    <button id="nav_button_vertical" onclick="left();"></button>
+                    <button id="nav_button_mid" onclick="mid();"></button>
+                    <button id="nav_button_vertical" onclick="right();"></button><br>
+                    <button id="nav_button_horizontal" onclick="down();"></i></button>
+                </td>
+                <td><a onclick="back();"><i class="icon-minus"></i><i class="icon-minus"></i></a></td>
+			</tr>
+			<tr>
+                <td><a id="recieve"><i class="icon-minus"></i></a></td>
+                <td><a id="hang"><i class="icon-minus"></i></a></td>
+			</tr>
+		</table>
+        <br>
+		<table class="center" id="numbers">
+			<tr>
+			<td><a>1</a></td>
+			<td><a onclick="up();">2</a></td>
+			<td><a>3</a></td>
+			</tr>
+			<tr>
+			<td><a onclick="left();">4</a></td>
+			<td><a onclick="mid();">5</a></td>
+			<td><a onclick="right();">6</a></td>
+			</tr>
+			<tr>
+			<td><a>7</a></td>
+			<td><a onclick="down();">8</a></td>
+			<td><a>9</a></td>
+			</tr>
+			<tr>
+			<td><a>*</a></td>
+			<td><a>0</a></td>
+			<td><a>#</a></td>
+			</tr>
+		</table>
+		</div>
+	</div>
+</center>
+</body>
+</html>
