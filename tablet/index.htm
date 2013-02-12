@@ -1,23 +1,30 @@
-<!docktype html>
+<!doctype html>
 <html>
 <head>
 <title>Tablet</title>
 <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="style.css" rel="stylesheet"/>
 <script src="../bootstrap/js/jquery.js"></script>
-<script src="pixastic.js"></script>
 <script src="script.js"></script>
 <body>
 <center>
 <div id="tablet_container">
+	<div class="undo">
+        	<a class="left_button" >Undo  </a>
+        	<a class="right_button"> Redo</a>
+    	</div>
 <br /><br />
 	<div id="image_library" class="tablet"></div>
 	<div id="editor" class="tablet"></div>
 	<div id='home' class='tablet'></div>
+	<div id="menu"></div>
+	<div id="slider"style="background:#000;padding:5px;position:absolute;bottom:150px;left:500px;">
+		<input id="test" type="range" />
+	</div>
+	<div id="rect"></div>
     <div class="toolbar">
-        <a class="left_button">Menu</a>
-        <a class="mid_button">Menu</a>
-        <a class="right_button">Menu</a>
+        <a class="left_button" onclick="menu_action();">Menu</a>
+        <a class="right_button" onclick="back();">Back</a>
     </div>
 </div>
 </center>

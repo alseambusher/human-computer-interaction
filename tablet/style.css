@@ -1,4 +1,13 @@
 /* box-shadow: x-offest y-offset blur length  color*/
+#rect{
+	opacity:0.8;
+	width:400px;
+	resize:both;
+	height:300px;
+	position:absolute;
+	bottom:300px;
+	left:300px;
+}
 body{
     background:#eee;
     padding:80px;
@@ -54,7 +63,7 @@ body{
 .toolbar{
     margin:0px 0px 0px 40px;
     position:absolute;
-    bottom:100px;
+    bottom:98px;
     height:30px;
     width:720px;
     background:#000;
@@ -63,13 +72,41 @@ body{
 .toolbar .left_button{
     float:left;
     padding:5px 0px 0px 15px;
-}
-.toolbar .mid_button{
-    padding:10px 0px 0px 15px;
+    cursor:pointer;
 }
 .toolbar .right_button{
     float:right;
     padding:5px 15px 0px 0px;
+    cursor:pointer;
+}
+.undo{
+    margin:0px 0px 0px 40px;
+    position:absolute;
+    top:98px;
+    height:30px;
+    width:720px;
+    background:#000;
+    color:#fff;
+}
+.undo.left_button{
+    float:left;
+    padding:5px 0px 0px 15px;
+    cursor:pointer;
+}
+.undo.right_button{
+    float:right;
+    padding:5px 15px 0px 0px;
+    cursor:pointer;
+}
+#menu{
+    	margin:0px 0px 0px 40px;
+    	padding:5px 0px 5px 15px;
+	font-size:1.2em;
+	color:#08C;
+	background:#000;
+	position:absolute;
+	bottom:130px;
+	cursor:pointer;
 }
 
 .center{
@@ -231,3 +268,4 @@ body{
 #pto{
 	font-size:0.7em;
 }
+
