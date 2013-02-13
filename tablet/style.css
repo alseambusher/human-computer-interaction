@@ -129,6 +129,16 @@ body{
     width:400px;
     color:#fff;
 }
+#rgb{
+    height:110px;
+    font-size: 2em;
+    position:absolute;
+    left:500px;
+    bottom:150px;
+    width:400px;
+    color:#fff;
+
+}
 #zoom{
     background:#000;
     position:absolute;
@@ -141,7 +151,7 @@ body{
     color:#08c;
 }
 
-#zoom a{
+#zoom span{
     cursor:pointer;
     font-size:5em;
 }
@@ -175,9 +185,9 @@ body{
     left:600px;
 }
 #hist{
-    background:#000;
     position:absolute;
     bottom:400px;
+    width:500px;
     left:500px;
     height:40px;
     opacity:0.6;

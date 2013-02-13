@@ -25,10 +25,16 @@
 		<input id="test" type="range" />
         <a></a>
 	</div>
+    <div class="slider" id="rgb">
+        <input id="test" type="range" /> <span style="color:red;">R</span><br><br>
+        <input id="test" type="range" /><span style="color:green;"> G</span><br><br>
+        <input id="test" type="range" /><span style="color:blue;"> B</span><br><br>
+        <a></a>
+	</div>
     <div class="slider" id="hsv">
-        <input id="test" type="range" /> 1<br><br>
-        <input id="test" type="range" /> 2<br><br>
-        <input id="test" type="range" /> 3<br><br>
+        <input id="test" type="range" /> H<br><br>
+        <input id="test" type="range" /> S<br><br>
+        <input id="test" type="range" /> V<br><br>
         <a></a>
 	</div>
     <div id="rect"></div>
@@ -36,13 +42,13 @@
         <h2>Do you want to save?</h2><br>
         <span class="btn-inverse" style="padding:5px 20px 5px 20px;cursor:pointer" onclick="switch_window('image_library');$('#prompt').fadeOut();$('.undo').fadeOut(100);">Ok</span>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <span class="btn-inverse" style="padding:5px;cursor:pointer" onclick="$('#prompt').fadeOut()">Cancel</span>
+        <span class="btn-inverse" style="padding:5px;cursor:pointer" onclick="switch_window('image_library');$('#prompt').fadeOut();$('.undo').fadeOut(100);">Cancel</span>
     </div>
     <div id="dial_holder">
         <input type="text" value="0" class="dial">
     </div>
     <div id="zoom">
-        <a>+</a> | <a>-</a>
+        <span>+ </span> <span> | </span> <span> - </span>
     </div>
     <div id="hist"><img src="hist.gif" /></div>
     <div class="toolbar">

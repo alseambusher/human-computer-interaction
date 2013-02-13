@@ -33,6 +33,9 @@ function init(){
     $('#hsv').draggable();
 	$('#hsv').fadeOut(0);
 
+    $('#rgb').draggable();
+	$('#rgb').fadeOut(0);
+
     $('#zoom').draggable();
 	$('#zoom').fadeOut(0);
 
@@ -44,7 +47,7 @@ function init(){
 	$('.undo').fadeOut(0);
     $('#prompt').fadeOut(0);
 	switch_window('home',0);
-	switch_window('image_library');
+	//switch_window('image_library');
 
 	//costruct image library
 	make_image_library();
@@ -116,7 +119,7 @@ function menu_action(){
                 case 'Crop':$('#rect').fadeIn();break;
                 case 'Rotate':$('#dial_holder').fadeIn();break;
                 case 'HSV':$('#hsv').fadeIn();break;
-                case 'RGB':$('#hsv').fadeIn();break;
+                case 'RGB':$('#rgb').fadeIn();break;
                 case 'Zoom':$('#zoom').fadeIn();break;
                 case 'Histogram':$('#hist').fadeIn();break;
                 case 'Sepia':back();break;
@@ -140,6 +143,7 @@ function back(){
         $('#hsv').fadeOut();
         $('#zoom').fadeOut();
         $('#hist').fadeOut();
+        $('#rgb').fadeOut();
         _menu='inactive';
         //$('#menu').slideUp();
 	}
