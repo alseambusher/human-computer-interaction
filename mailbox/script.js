@@ -1,14 +1,16 @@
 var mails=[{'from':'Suresh Alse','from_email':'alseambusher@gmail.com','subject':'Hackathon ahead 2013 india','body':'I wanna hack'},{'from':'Prajwal','from_email':'prp@gmail.com','subject':'Hack2 behind 2012 USA','body':'I wanna hack2'}];
 var tags=['inbox','draft','sent'];
 var windows=['home','inbox','message','compose'];
-var ID="";
+var BUTTON_ID;
+var LINK_ID;
+var LINK_ID2;
 var MAIL;
 window.onload=init;
 function init(){
     for(var i=0;i<windows.length;i++)
         $("#"+windows[i]+"_container").fadeOut(0);
     $("#inbox_container").fadeIn(0);
-
+    set_clicks();
 	populate_inbox();
 }
 function switch_window(_window){
@@ -39,6 +41,7 @@ function populate_inbox(){
     $("#inbox").find("li a").click(function(){
         show_inbox_message(mails[parseInt(this.id)]);
     });
+    set_clicks();
 }
 function show_inbox_message(mail){
     MAIL=mail;
@@ -66,6 +69,67 @@ function reply(){
     switch_window('compose');
 }
 function set_clicks(){
+    $('button').mouseover(function(){
+        BUTTON_ID=this;
+        var local_button=this;
+        setTimeout(function(){
+            if(local_button==BUTTON_ID){
+                console.log("clicked");
+                $(local_button).trigger('click');
+                BUTTON_ID="";
+            }
+        },2000);
+    });
+    $('button').mouseout(function(){
+        BUTTON_ID="";
+    });
+    /*$('.nav li').mouseover(function(){
+        console.log(this);
+        LINK_ID=this;
+        var local_button=this;
+        setTimeout(function(){
+            if(local_button==LINK_ID){
+                console.log("clicked");
+                $(local_button).trigger('click');
+                LINK_ID="";
+            }
+        },2000);
+    });
+    $('.nav li').mouseout(function(){
+        LINK_ID="";
+    });*/
+    $('.active a').mouseover(function(){
+        console.log(this);
+        LINK_ID2=this;
+        var local_button=this;
+        setTimeout(function(){
+            if(local_button==LINK_ID2){
+                console.log("clicked");
+                $(local_button).trigger('click');
+                LINK_ID2="";
+            }
+        },2000);
+    });
+    $('.active a').mouseout(function(){
+        LINK_ID2="";
+    });
+
+    $(':checkbox').mouseover(function(){
+        console.log(this);
+        LINK_ID=this;
+        var local_button=this;
+        setTimeout(function(){
+            if(local_button==LINK_ID){
+                console.log("clicked");
+                $(local_button).trigger('click');
+                LINK_ID="";
+            }
+        },2000);
+    });
+    $(':checkbox').mouseout(function(){
+        LINK_ID="";
+    });
+
 
 }
 function clicker(id){
