@@ -22,11 +22,6 @@
 	    	Welcome, Hacker &nbsp;
 		<a href="#">Settings</a>
             </p>
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
@@ -37,33 +32,73 @@
         <div class="span3">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
-              <li class="nav-header" id="priority_list">Priority Inbox</li>
-              <!--<li class="active"><a href="#">Link</a></li>-->
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li class="nav-header">Inbox<span class="alert_num">(1000)</span></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li class="nav-header">Sidebar</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
+              <li class="nav-header">Navigator</li>
+              <li class="active" onclick="new_compose();"><a href="#">Compose Mail</a></li>
+              <li><a> </a></li>
+              <li class="active" onclick="show_inbox();"><a href="#">Priority Inbox <em>(4)</em></a></li>
+              <li><a> </a></li>
+              <li class="active" onclick="show_inbox();"><a href="#">Inbox <em>(113)</em></a></li>
+              <li><a> </a></li>
+              <li class="active" onclick="show_inbox();"><a href="#">Sent Mail</a></li>
+              <li><a> </a></li>
+              <li class="active" onclick="show_inbox();"><a href="#">Drafts</a></li>
+              <li><a> </a></li>
+              <li class="nav-header">Tags</li>
+              <li class="active" onclick="show_inbox();"><a href="#">IT Group</a></li>
+              <li><a> </a></li>
+              <li class="active" onclick="show_inbox();"><a href="#">Linux India</a></li>
+              <li><a> </a></li>
+              <li class="active" onclick="show_inbox();"><a href="#">InCTF</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
           <div class="hero-unit">
-            <h1>Mailbox</h1>
-            <p>Have to populate here</p>
-            <p><a href="#" class="btn btn-primary btn-large">Dummy >></a></p>
+              <h1>Mailbox</h1><br />
+            <div id="home_container">
+                <p>Have to populate here</p>
+                <p><a href="#" class="btn btn-primary btn-large" onclick="alert('bdfgbdfgbd');" onmouseover="clicker(this.id);" id="dummy">Dummy >></a></p>
+            </div>
+            <div id="inbox_container">
+                <span class="form-search">
+                    <input type="text" placeholder="search query" class="input-medium search-query">
+                    <button class="btn">Search</button>
+                </span><br /><br />
+                <button class="btn btn-alert">Select/Diselect all</button>
+                <button class="btn btn-primary">Archive</button>
+                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-info">Spam</button>
+                <br /><br />
+                <ul class="nav nav-list" id="inbox"></ul>
+            </div>
+            <div id="message_container">
+                <button class="btn btn-info btn-small" onclick="switch_window('inbox');"><<</button>
+                <button class="btn btn-primary">Archive</button>
+                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-info">Spam</button>&emsp;
+                <button class="btn btn-alert" onclick="forward();">Forward</button>
+                <button class="btn btn-alert" onclick="reply();">Reply</button>
+                <ul class="nav nav-list" id="inbox"></ul>
+                <br /><br />
+                <div class="message_inbox"></div>
+            </div>
+            <div id="compose_container">
+                <button class="btn btn-alert">Send</button>
+                <button class="btn btn-primary">Archive</button>
+                <button class="btn btn-danger">Discard</button><br /><br />
+                <input type="text" placeholder="To" style="width:800px;" id="compose_to">
+                <input type="text" placeholder="Cc" style="width:800px;">
+                <input type="text" placeholder="Bcc" style="width:800px;">
+                <input type="text" placeholder="Subject" style="width:800px;" id="compose_subject">
+                <textarea rows='10' style="width:800px;" id="compose_body"></textarea><br /><br />
+                <button class="btn btn-alert">Send</button>
+                <button class="btn btn-primary">Archive</button>
+                <button class="btn btn-danger">Discard</button><br /><br />
+            </div>
+
           </div>
         </div><!--/span-->
       </div><!--/row-->
-
-      <hr>
-
-      <footer>
-        <p>&copy; Hacker Company 2013</p>
-      </footer>
 
     </div><!--/.fluid-container-->
 </body></html>

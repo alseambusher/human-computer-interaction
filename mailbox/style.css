@@ -1,3 +1,4 @@
+html {overflow-y: scroll;}
 body{
 	font-family:ubuntu,arial;
 	background:#fff;
@@ -15,9 +16,14 @@ body{
   		padding-right: 5px;
 	}
 }
-.alert_num{
-	color:red;
-}
 .pull-right a{
 	color:#fff;
+}
+.btn{
+    box-shadow: 0px 0px 6px rgba(0,0,0,.8);
+}
+.message_inbox{
+    background:#fff;
+    box-shadow: 0px 0px 30px rgba(0,0,0,.8);
+    padding:10px;
 }
