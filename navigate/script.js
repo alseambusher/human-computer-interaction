@@ -3,6 +3,7 @@ function init(){
 	//start screen fix
 
     $("#message").slideUp(0);
+    $("#end").fadeOut(0);
     /*$('#rect').draggable();
     $('#rect').resizable();
 	$('#rect').fadeOut(0);*/
