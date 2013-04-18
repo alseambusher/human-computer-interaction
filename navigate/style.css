@@ -1,56 +1,55 @@
 /* box-shadow: x-offest y-offset blur length  color*/
 body{
     background:#eee;
-    padding:80px;
+    padding:17px;
     font-family:ubuntu,arial,sans;
 }
 #tablet_container{
+    width:1217px;
+    height:721px;
     box-shadow: 0px 0px 30px rgba(0,0,0,.8);
-    width:800px;
-    height:540px;
     border-radius:25px;
     background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #1c1c1c 91%, #111111 99%, #2b2b2b 100%, #131313 100%);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(12%,#595959), color-stop(25%,#666666), color-stop(39%,#474747), color-stop(50%,#2c2c2c), color-stop(91%,#1c1c1c), color-stop(99%,#111111), color-stop(100%,#2b2b2b), color-stop(100%,#131313));
 }
 .tablet{
-	padding-top:20px;
-	width:720px;
-	height:420px;
-	overflow:hidden;
+    width:1117px;
+    height:621px;
 	background:#eee;
-    box-shadow: 0px 0px 15px #333;
+    overflow:hidden;
+    box-shadow: 0px 0px 15px #fff;
 	border-radius:5px;
 }
 #home{
-	background:url('home.jpg');
-	background-size:720px 420px;
+	background:#eee;
 }
+#home img{
+    max-width:5000%;
+}
+#home #message{
+    position:relative;
+    bottom:0px;
+    color:rgb(0, 204, 255);
+    background:#333;
+    font-size:2em;
+    padding:15px;
+}
+#home #info_bar{
+    position:relative;
+    top:-180px;
+    color:rgb(0, 204, 255);
+    background:#333;
+    font-size:2em;
+    padding:35px;
+    opacity:0.7;
 
-#image_library{
-	text-align:center;
-	background:url('image_editor.jpg');
-	background-size:720px 520px;
 }
-#image_library img{
-	width:140px;
-	height:100px;
-	border:5px solid #fff;
-	margin:10px;
-    -moz-transition-duration:0.5s;
-    -webkit-transition-duration:0.5s;
-    transition-duration:0.5s;
+#home #info_bar table td{
+    padding:5px;
 }
-#image_library img:hover{
-	-moz-transform:rotate(9deg);
-	-webkit-transform:rotate(9deg);
-	transform:rotate(9deg);
+.timer{
+    font-size:3em;
 }
-
-#editor{
-    background-repeat:no-repeat;
-    background-position:top;
-}
-
 .toolbar{
     margin:0px 0px 0px 40px;
     position:absolute;
@@ -166,13 +165,17 @@ body{
     color:#fff;
 }
 #prompt{
-    background:#000;
+    background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #1c1c1c 91%, #111111 99%, #2b2b2b 100%, #131313 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4c4c4c), color-stop(12%,#595959), color-stop(25%,#666666), color-stop(39%,#474747), color-stop(50%,#2c2c2c), color-stop(91%,#1c1c1c), color-stop(99%,#111111), color-stop(100%,#2b2b2b), color-stop(100%,#131313));
+    box-shadow: 5px 5px 35px black;
 	width:400px;
-	height:90px;
-	position:absolute;
-	left:500px;
-    top:250px;
-    color:#08c;
+	height:190px;
+	position:relative;
+    top:-400px;
+    color:#08c;```
+}
+.btn{
+    box-shadow: 5px 5px 35px black;
 }
 #dial_holder{
     background:#000;
@@ -199,4 +202,3 @@ body{
 	text-align:center;
 	margin:0 auto;
 }
-
