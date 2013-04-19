@@ -47,6 +47,16 @@ body{
 #home #info_bar table td{
     padding:5px;
 }
+#help{
+    position:relative;
+    top:-600px;
+    color:rgb(0, 204, 255);
+    background:#333;
+    font-size:1.5em;
+    font-weight:bold;
+    padding:35px;
+    opacity:0.7;
+}
 .timer{
     font-size:3em;
 }
@@ -188,6 +198,8 @@ body{
 }
 .btn{
     box-shadow: 5px 5px 35px black;
+    font-family:ubuntu,arial;
+    font-weight:bold;
 }
 #dial_holder{
     background:#000;

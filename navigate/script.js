@@ -4,6 +4,7 @@ function init(){
 
     $("#message").slideUp(0);
     $("#end").fadeOut(0);
+    $("#info_bar").fadeOut(0);
     document.getElementById("welcome").play();
     /*$('#rect').draggable();
     $('#rect').resizable();
